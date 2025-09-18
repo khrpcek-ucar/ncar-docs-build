@@ -24,3 +24,6 @@ patches:
       - op: replace
         path: /spec/tls/0/secretName
         value: "hpc-docs-tls"
+      - op: add
+        path: /metadata/annotations/cert-manager.io~1cluster-issuer
+        value: "incommon"
