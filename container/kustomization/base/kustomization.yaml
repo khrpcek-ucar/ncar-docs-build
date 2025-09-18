@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- deployment.yaml
+- service.yaml
+- ingress.yaml
+
+namespace: default
+
+commonLabels:
+  app: hpc-docs
+
+# Optional: Example of customizing the deployment (e.g., increase replicas)
+#patches:
+#- patch: |-
+#    apiVersion: apps/v1
+#    kind: Deployment
+#    metadata:
+#      name: nginx-deployment
+#    spec:
+#      replicas: 2

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hpc-docs
+  labels:
+    app: hpc-docs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hpc-docs
+  template:
+    metadata:
+      labels:
+        app: hpc-docs-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
