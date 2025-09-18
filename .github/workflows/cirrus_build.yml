@@ -34,7 +34,11 @@ jobs:
         fetch-depth: 0
     
     - name: Where am image
-      run: pwd
+      run: |
+        pwd
+        ls
+        ls ci
+        ls docs
 
     - name: registry login
       uses: docker/login-action@v3
