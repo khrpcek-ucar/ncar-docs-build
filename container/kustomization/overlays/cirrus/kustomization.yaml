@@ -9,7 +9,7 @@ namespace: hpc-docs
 images:
 - name: nginx
   newName: hub.k8s.ucar.edu/hpc-docs/hpc-docs
-  newTag: 4d3e070
+  newTag: c264735
 
 patches:
   - target:
