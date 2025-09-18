@@ -17,3 +17,7 @@ spec:
             name: hpc-docs-nginx
             port:
               number: 80
+  tls:
+  - hosts:
+    - host.asdf.com
+    secretName: tls-secret
